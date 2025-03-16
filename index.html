@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@400..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Liter&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+IN:wght@100..400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+   
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="bm">BMI Calculator</h1>
+  
+        <form class="calculator">
+          <div>
+            <label for="weight">Weight (kg)</label>
+            <input
+              type="number"
+              id="weight1"
+              min="0"
+              step="any"
+              value="0"
+              inputmode="decimal"
+              onfocus="if (this.value === '0') this.value = ''"
+            />
+          </div>
+  
+          <div>
+            <label for="height">Height (cm)</label>
+            <input
+              type="number"
+              id="height1"
+              min="0"
+              step="any"
+              value="0"
+              inputmode="decimal"
+              onfocus="if (this.value === '0') this.value = ''"
+            />
+          </div>
+  
+          <div class="botton-group">
+            <button class="reset-button" type="reset">Reset</button>
+            <button class="calculate-button" onclick="calculatebmi()" id="calculateButton" type="button">Calculate</button>
+        </div>
+        </form>
+        <!-- result showing area -->
+        <div class="result-box">
+            <h1  id="resultbmiscore" class="bmi-score">0</h1>
+            <h3    id="resultbmicategory"class="bmi-category">N/A</h3>
+        </div>
+        <!-- range bar -->
+        <div class="bmi-range-group">
+            <section class="underweight">
+                <div class="bmi-line">
+                    <h5 class="bmi-label">Underweight</h5>
+                    <h4 class="bmi-number">&lt; 18.5</h4>
+                </div>
+            </section>
+            <section class="normal">
+                <div class="bmi-line">
+                    <h5 class="bmi-label">Normal</h5>
+                    <h4 class="bmi-number"> 18.5 - 24.9</h4>
+                </div>
+            </section>
+            <section class="overweight">
+                <div class="bmi-line">
+                    <h5 class="bmi-label">Overweight</h5>
+                    <h4 class="bmi-number">25 - 29.9</h4>
+                </div>
+            </section>
+            <section class="obese">
+                <div class="bmi-line">
+                    <h5 class="bmi-label">Obese</h5>
+                    <h4 class="bmi-number"> 30 &gt;</h4>
+                </div>
+            </section>
+            <!-- bmi indicator -->
+            <div  id="bmiindicato" class="bmi-indicator"></div>
+        </div>
+</body>
+<script src="./script.js"></script>
+</html>

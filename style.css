@@ -1,0 +1,132 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+}
+body{
+    width:100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:url(https://www.beatxp.com/blog/wp-content/uploads/2023/05/BMI-Calculator.jpg)
+}
+.container {
+    margin-block: 1.5rem;
+    width: min(480px, 90%);
+    background: #fad47a;
+    height:530px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+    display: grid;
+    gap: 1rem;
+    
+  }
+  .bm{
+    color: #6786eb;
+  }
+  .calculator {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .calculator > *:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  
+  .calculator div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .calculator label {
+    flex: 0 0 120px;
+    font-weight: 600;
+  }
+  
+  .calculator input {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    outline-color: #555;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  
+  .calculator button {
+    width: 50%;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    background: #00a1a3;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    font-size: 0.875rem;
+  }
+  
+  .calculator button[type="reset"] {
+    background: #444;
+  }
+  
+  .calculator button:hover {
+    filter: brightness(120%);
+  }
+  .result-box{
+    text-align: center;
+  }
+  .bmi-category{
+    font-weight: 600;
+  }
+  .bmi-range-group{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+position: relative;
+    margin-top: 1rem;
+  }
+  .bmi-range-group section{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.bmi-range-group section .bmi-line{
+width: 100%;
+height: 6px;
+}
+.underweight .bmi-line{
+background: #0000ff;
+font-size: medium;
+}
+.normal .bmi-line{
+background: #008000;
+}
+.overweight .bmi-line{
+background: #ffa500;
+}
+.obese .bmi-line{
+background: #ff0000;
+}
+
+.bmi-range-group section .bmi-label{
+font-weight: 700;
+padding-top: 3px;
+}
+.bmi-indicator{
+    width:3px;
+    height:1.5rem;
+    background: rgb(11, 5, 14);
+    position: absolute;
+    top: -21%;
+    box-shadow: opx 0px 10px rgba(0, 0, 0, 0.3);
+    left: 0%;
+    transition: 300ms;
+    
+}
